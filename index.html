@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="View current ArNS Name Registration Fees by name category in ARIO and USD." />
+    <meta property="og:title" content="ArNS Name Registration Fees" />
+    <meta property="og:description" content="Real-time ArNS Registration Fees in $ARIO and USD." />
+    <title>ArNS Registration Fees</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <main>
+      <header class="sticky-header">
+        <h1>ArNS Registration Fees</h1>
+        <div id="search-container">
+          <div class="search-wrapper">
+            <input type="text" id="search-input" placeholder="Type a name to check prices..." />
+            <button id="clear-btn" aria-label="Clear search">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18" />
+                <line x1="6" y1="6" x2="18" y2="18" />
+              </svg>
+            </button>
+          </div>
+          
+          <button id="check-availability-btn">Check Availability</button>
+        </div>
+        <div id="search-results"></div>      
+        <div id="pricing-metrics">
+          <p id="ario-usd"></p>
+          <p id="demand-factor" class="subtle" title="This multiplier adjusts prices based on current demand."></p>
+        </div>
+        <div id="spinner">Loading data...</div>
+      </header>
+      <table>
+        <thead>
+          <tr>
+            <th>Characters</th>
+            <th>1 Year</th>
+            <th>2 Years</th>
+            <th>3 Years</th>
+            <th>4 Years</th>
+            <th>5 Years</th>
+            <th>Yearly Renewal</th>
+            <th>Permabuy</th>
+          </tr>
+        </thead>
+        <tbody id="price-table-body">
+          <!-- Rows inserted dynamically -->
+        </tbody>
+      </table>
+    </main>
+    <footer>
+      <ul>
+        <li><a href="https://ar.io/arns" target="_blank">Learn</a></li> | 
+        <li><a href="https://arns.ar.io" target="_blank">Buy</a></li> | 
+        <li><a href="https://docs.ar.io/arns" target="_blank">Build</a></li>
+      </ul>
+    </footer>    
+    <script src="script.js"></script>
+  </body>
+</html>
